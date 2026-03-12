@@ -1,0 +1,8 @@
+@namespace("ru.yandex.practicum.kafka.telemetry.event")
+protocol TemperatureSensorProtocol {
+
+	record TemperatureSensorAvro {
+		int temperature_c;
+		int temperature_f;
+	}
+}

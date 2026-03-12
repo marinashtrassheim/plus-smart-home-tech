@@ -1,0 +1,7 @@
+@namespace("ru.yandex.practicum.kafka.telemetry.event")
+protocol ScenarioRemovedEventProtocol {
+
+	record ScenarioRemovedEventAvro {
+		string name;
+	}
+}
