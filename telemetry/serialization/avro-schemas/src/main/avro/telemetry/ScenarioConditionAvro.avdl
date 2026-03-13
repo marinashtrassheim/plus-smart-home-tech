@@ -1,0 +1,12 @@
+@namespace("ru.yandex.practicum.kafka.telemetry.event")
+protocol ScenarioConditionProtocol {
+	import idl "ConditionTypeAvro.avdl";
+	import idl "ConditionOperationAvro.avdl";
+
+	record ScenarioConditionAvro {
+		string sensor_id;
+		ConditionTypeAvro type;
+		ConditionOperationAvro operation;
+		union {null, int, boolean} value = null;
+	}
+}

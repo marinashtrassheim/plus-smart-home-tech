@@ -1,0 +1,12 @@
+@namespace("ru.yandex.practicum.kafka.telemetry.event")
+protocol ConditionTypeProtocol {
+
+	enum ConditionTypeAvro {
+		MOTION,
+		LUMINOSITY,
+		SWITCH,
+		TEMPERATURE,
+		CO2LEVEL,
+		HUMIDITY
+	}
+}
