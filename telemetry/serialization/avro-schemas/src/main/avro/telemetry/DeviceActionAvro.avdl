@@ -1,0 +1,10 @@
+@namespace("ru.yandex.practicum.kafka.telemetry.event")
+protocol DeviceActionProtocol {
+	import idl "ActionTypeAvro.avdl";
+
+	record DeviceActionAvro {
+		string sensor_id;
+		ActionTypeAvro type;
+		int? value = null;
+	}
+}

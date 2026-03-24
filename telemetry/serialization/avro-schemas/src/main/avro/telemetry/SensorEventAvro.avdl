@@ -1,0 +1,21 @@
+@namespace("ru.yandex.practicum.kafka.telemetry.event")
+protocol SensorEventProtocol {
+	import idl "ClimateSensorAvro.avdl";
+	import idl "LightSensorAvro.avdl";
+	import idl "MotionSensorAvro.avdl";
+	import idl "SwitchSensorAvro.avdl";
+	import idl "TemperatureSensorAvro.avdl";
+
+	record SensorEventAvro {
+		string id;
+		string hubId;
+		timestamp_ms timestamp;
+		union {
+			ClimateSensorAvro,
+			LightSensorAvro,
+			MotionSensorAvro,
+			SwitchSensorAvro,
+			TemperatureSensorAvro
+		} payload;
+	}
+}
