@@ -39,7 +39,7 @@ public class EventController extends CollectorControllerGrpc.CollectorController
     }
 
     @Override
-    public void sendSensorEvent(SensorEventProto request,
+    public void collectSensorEvent(SensorEventProto request,
                                 StreamObserver<Empty> responseObserver) {
         try {
             log.info("Received gRPC sensor event: id={}, hubId={}, type={}",
@@ -71,7 +71,7 @@ public class EventController extends CollectorControllerGrpc.CollectorController
     }
 
     @Override
-    public void sendHubEvent(HubEventProto request,
+    public void collectHubEvent(HubEventProto request,
                              StreamObserver<Empty> responseObserver) {
         try {
             log.info("Received gRPC hub event: hubId={}, type={}",
